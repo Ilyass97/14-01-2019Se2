@@ -1,0 +1,34 @@
+{
+  "name": "14-01-2019se2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ilyass97/14-01-2019Se2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ilyass97/14-01-2019Se2/issues"
+  },
+  "homepage": "https://github.com/Ilyass97/14-01-2019Se2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "colors": "^1.3.2",
+    "express": "^4.16.4",
+    "node-modules": "^1.0.1",
+    "nodemon": "^1.18.7"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "supertest": "^3.3.0"
+  },
+  "jest": {
+    "verbose":true,
+    "collectCoverage": true
+  }
+}
