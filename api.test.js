@@ -92,9 +92,12 @@ describe('PUT /classe/cambia', () =>
         const res = await request(app)
             .put('/classe/cambia/?nome=Ilyass')
             .send(studente)
-            .set('Accept', 'application/json');
-        expect(200);
-        done(done);
+            .set('Accept', 'application/json')
+        .expect(200)
+        .end(function(err, res) {
+            if(err) return done(err);
+            done();
+        });
     });
 
     it('--> Aggiorno i dati e restituisce 404', async () => {
@@ -110,9 +113,12 @@ describe('PUT /classe/cambia', () =>
         const res = await request(app)
             .put('/classe/cambia/?nome=ElllaNonEsiste')
             .send(studente)
-            .set('Accept', 'application/json');
-        expect(404);
-        done();
+            .set('Accept', 'application/json')
+        .expect(404)
+        .end(function(err, res) {
+            if(err) return done(err);
+            done();
+        });
         
 
     });
@@ -125,7 +131,10 @@ describe('DELETE /classe/elimina', () => {
         request(app)
             .delete('/classe/elimina?nome=Eleonora')
             .expect(200)
-            .end(done); 
+            .end(function(err, res) {
+                if(err) return done(err);
+                done();
+            }); 
     }); 
     
     //Elimino uno studente assumendo che non esiste e mi aspetto che lo status sia 404
@@ -133,6 +142,9 @@ describe('DELETE /classe/elimina', () => {
         request(app)
         .del('/classe/elimina?nome=Eleonora667')
         .expect(404)
-        .end(done); 
+        .end(function(err, res) {
+            if(err) return done(err);
+            done();
+        }); 
     });
  });
