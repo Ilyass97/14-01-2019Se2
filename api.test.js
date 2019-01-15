@@ -80,7 +80,7 @@ test('GET /classe/nome --> restituisce uno studente particolare', async () => {
 
 describe('PUT /classe/cambia', () =>
 {
-    it('--> Aggiorno i dati e restituisce 200 con i nuovi dati aggiornati', async () => {
+    it('--> Aggiorno i dati e restituisce 200 con i nuovi dati aggiornati', async (done) => {
         
         var studente = {
             nome: 'Ester',
@@ -94,7 +94,7 @@ describe('PUT /classe/cambia', () =>
             .send(studente)
             .set('Accept', 'application/json');
         expect(200);
-        done();
+        done(done);
     });
 
     it('--> Aggiorno i dati e restituisce 404', async () => {
