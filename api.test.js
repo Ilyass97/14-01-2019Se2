@@ -78,7 +78,7 @@ test('GET /classe/nome --> restituisce uno studente particolare', async () => {
     });
 });
 
-describe('PUT /classe/cambia', () =>
+/*describe('PUT /classe/cambia', function() 
 {
     it('--> Aggiorno i dati e restituisce 200 con i nuovi dati aggiornati', async (done) => {
         
@@ -122,7 +122,7 @@ describe('PUT /classe/cambia', () =>
         
 
     });
-});
+}); */
 
 //Verifico il corretto funzionamento quando elimino uno studente esistente o inesistente
 describe('DELETE /classe/elimina', () => {
